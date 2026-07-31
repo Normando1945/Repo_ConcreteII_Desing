@@ -10,3 +10,6 @@ dist/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Local reference material (not part of the repository)
+/Ignore/
