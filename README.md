@@ -1,22 +1,19 @@
 <p align="center">
-  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTgzZGc0czVnY3ByZWZkZnlkaGlqeGJiaWU2cTZxOWNzdzgybGl0byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LPWgnWIytRmDH4OvTl/giphy.gif" width="50%" alt="Seismic Desing Banner">
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2xscjB6YXFmemF1bHlqbW11ZWlzemo4bm5zMWU5aWt2ejY0Y3RuNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Tl25hw4bD37AQ/giphy.gif" width="50%" alt="Reinforced Concrete Design Banner">
 </p>
 
-# Seismic-Resistant Design
+# Reinforced Concrete Design II
 
-### Educational Repository for Seismic Design and Structural Engineering
+### Educational Repository for Concrete Design and Structural Engineering
 
-**Author:** Msc. Ing. Carlos Andrés Celi Sánchez  
+**Authors:** Msc. Ing. Carlos Andrés Celi Sánchez · Nicolás Mora Bowen · Juan Sebastián Baquero  
 **Semester:** FEB – 2026
 
-This repository has been created to support the teaching process of the **Seismic-Resistant Design** course during the current academic semester. It will progressively include theoretical notes, design criteria, Python-based educational tools, numerical examples, and class materials related to the structural dynimics and seismic analysis of structures.
+This repository supports the teaching process of the **Reinforced Concrete Design II** course during the current academic semester. It progressively includes theoretical notes, design criteria, Python-based educational tools, numerical examples, and class materials for the strength design of reinforced-concrete members — from material behavior to safe, ductile, durable, and constructible structures.
 
 This repository is **currently under construction** and will continue to be updated throughout the semester as new topics are covered in class.
 
 <p align="center">
-  <a href="https://github.com/Normando1945/Repo_Seismic_Desing/actions/workflows/python-check.yml">
-    <img src="https://github.com/Normando1945/Repo_Seismic_Desing/actions/workflows/python-check.yml/badge.svg" alt="Python Check">
-  </a>
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License">
 </p>
 
@@ -24,37 +21,44 @@ This repository is **currently under construction** and will continue to be upda
 
 This repository is expected to progressively cover topics such as:
 
-- Fundamental concepts of earthquake engineering
-- Seismic hazard and design philosophy
-- Structural regularity and irregularity
-- Lateral force-resisting systems
-- Equivalent lateral force procedures
-- Modal analysis concepts
-- Design spectra and seismic parameters
-- Drift control and serviceability checks
-
+- Design basis: assumptions, loads, units, and governing limit states
+- Flexure and sections: strain compatibility and nominal resistance
+- Columns: axial load, moment, slenderness, confinement, and interaction diagrams
+- Slabs: one-way and two-way systems, gravity load distribution, and serviceability
+- Shear and detailing: preventing brittle behavior and ensuring constructible reinforcement
+- Special components: stairs, walls, and foundations connected to the structural system
+- Seismic concepts: capacity design and ductile detailing
 
 ## Current Contents
 
 At its current stage, the repository includes:
 
-- The initial base structure of the course repository
-- Introductory files for future class materials
-- A progressive framework for organizing notebooks, notes, and design examples
-- Setup files for future computational implementations
+- `Markdowns/00_Introduction.ipynb` — theory: design philosophy, limit states, strength vs. capacity design, ACI 318-25 framework
+- `Markdowns/01_Loads.ipynb` — theory: gravity and lateral actions, load symbols, factored combinations, dead/live load takeoff
+- `Examples/Basic_Coding.ipynb` — initial coding example for the course package
+- The reusable Python package and setup files for future computational implementations
 
 ## Repository Structure
 
-    Repo_Seismic_Desing/
-    │── examples/
-    │── notes/
-    │── seismic_design/
-    │   └── __init__.py
+    Repo_ConcreteII_Desing/
+    │── Markdowns/
+    │   ├── 00_Introduction.ipynb
+    │   ├── 01_Loads.ipynb
+    │   └── assets/
+    │── Examples/
+    │   └── Basic_Coding.ipynb
+    │── repo__CORE_concreteII_desing/
+    │   ├── __init__.py
+    │   └── core.py
     │── README.md
     │── requirements.txt
     │── setup.py
 
 > **Note:** The repository structure may evolve during the semester as new material is incorporated.
+
+## Normative Framework
+
+This course uses **ACI CODE-318-25 — Building Code Requirements for Structural Concrete and Commentary** as its principal design reference. In Ecuador, the applicable provisions of the **Norma Ecuatoriana de la Construcción (NEC)** and the requirements of the authority having jurisdiction must be checked for each project. Standards such as ASCE 7 and ASCE 41 are valuable companions when the problem involves load definition, existing structures, or seismic evaluation.
 
 ## Prerequisites
 
@@ -92,7 +96,7 @@ This helps avoid confusion with terminal commands, file paths, and virtual envir
 Once the Windows terminal is open, run:
 
 ```bash
-    git clone https://github.com/Normando1945/Repo_Seismic_Desing.git
+    git clone https://github.com/Normando1945/Repo_ConcreteII_Desing.git
 ```
 
 This command will download the repository to the current folder.
@@ -101,7 +105,7 @@ This command will download the repository to the current folder.
 
 After cloning the repository, enter the project folder with:
 ```bash
-    cd Repo_Seismic_Desing
+    cd Repo_ConcreteII_Desing
 ```
 From this point on, all commands should be executed inside this folder.
 
@@ -181,7 +185,7 @@ If students are going to work with notebooks in VS Code, it is recommended to al
 ```
 Then register the environment as a Jupyter kernel:
 ```bash
-    python -m ipykernel install --user --name=venv --display-name "Python (Seismic Design)"
+    python -m ipykernel install --user --name=venv --display-name "Python (Concrete Design II)"
 ```
 This will allow students to select the correct Python environment when opening notebooks.
 
@@ -195,7 +199,7 @@ Inside **Visual Studio Code**, follow these steps:
 
 If a notebook is opened, also make sure that the selected kernel is:
 
-`Python (Seismic Design)`
+`Python (Concrete Design II)`
 
 ### Step 13. Verify that the installation works correctly
 
@@ -207,7 +211,7 @@ Run:
 ```
 Then type:
 ```bash
-    import seismic_design
+    from repo__CORE_concreteII_desing import SimpleMatrixStack
     print("Package imported successfully")
 ```
 If no error appears, the installation was completed correctly.
@@ -216,10 +220,9 @@ If no error appears, the installation was completed correctly.
 
 Since the repository is still being developed, the first stage is focused on building a solid educational base for the course. This may include:
 
-- Introductory notes
-- Basic seismic design concepts
+- Theory notebooks on design philosophy, loads, and limit states
+- Class-based Python tools for flexure, axial load, shear, and slab design
 - Initial numerical examples
-- Class-based Python tools for future applications
 - Progressive organization of notebooks and supporting files
 
 As the semester advances, more files and examples will be added.
@@ -249,7 +252,7 @@ Open **Command Prompt** or the **integrated terminal in VS Code**.
 
 ### Step 2. Move into the repository folder
 ```bash
-    cd Repo_Seismic_Desing
+    cd Repo_ConcreteII_Desing
 ```
 ### Step 3. Activate the virtual environment
 
@@ -271,8 +274,8 @@ Students are encouraged to run `git pull` before starting each class session in 
 
 ### First-time installation
 ```bash
-    git clone https://github.com/Normando1945/Repo_Seismic_Desing.git
-    cd Repo_Seismic_Desing
+    git clone https://github.com/Normando1945/Repo_ConcreteII_Desing.git
+    cd Repo_ConcreteII_Desing
     python -m venv venv
     venv\Scripts\activate
     pip install -r requirements.txt
@@ -280,7 +283,7 @@ Students are encouraged to run `git pull` before starting each class session in 
 ```
 ### Regular update before class
 ```bash
-    cd Repo_Seismic_Desing
+    cd Repo_ConcreteII_Desing
     venv\Scripts\activate
     git pull
 ```
@@ -296,7 +299,7 @@ Students are encouraged to run `git pull` before starting each class session in 
 
 ## Important Note for Students
 
-This repository is maintained exclusively by the course author.
+This repository is maintained exclusively by the course authors.
 
 Students are expected to clone the repository and update their local copies during the semester. They should not modify the original online repository.
 
@@ -308,18 +311,18 @@ If you use this repository in academic work, class projects, reports, or educati
 
 ### BibTeX
 
-    @misc{celi2026seismicdesign,
-      author       = {Carlos Andrés Celi Sánchez},
-      title        = {Seismic-Resistant Design: Educational Repository for Seismic Design and Structural Engineering},
+    @misc{celi2026concretedesignII,
+      author       = {Celi Sánchez, Carlos Andrés and Mora Bowen, Nicolás and Baquero, Juan Sebastián},
+      title        = {Reinforced Concrete Design II: Educational Repository for Concrete Design and Structural Engineering},
       year         = {2026},
       publisher    = {GitHub},
       journal      = {GitHub repository},
-      howpublished = {\url{https://github.com/Normando1945/Repo_Seismic_Desing}}
+      howpublished = {\url{https://github.com/Normando1945/Repo_ConcreteII_Desing}}
     }
 
 ### APA (7th Edition)
 
-Celi Sánchez, C. A. (2026). *Seismic-Resistant Design: Educational Repository for Seismic Design and Structural Engineering* [Structural Engineering]. GitHub. https://github.com/Normando1945/Repo_Seismic_Desing
+Celi Sánchez, C. A., Mora Bowen, N., & Baquero, J. S. (2026). *Reinforced Concrete Design II: Educational Repository for Concrete Design and Structural Engineering* [Structural Engineering]. GitHub. https://github.com/Normando1945/Repo_ConcreteII_Desing
 
 ## License
 <p align="center">
@@ -330,12 +333,12 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 
 ## Contributing
 
-This repository is maintained by the author as the official course repository for **Seismic-Resistant Design**.
+This repository is maintained by the authors as the official course repository for **Reinforced Concrete Design II**.
 
-Students are encouraged to use the repository, report bugs, and suggest improvements whenever necessary. Nevertheless, the official development and organization of the repository remain under the supervision of the author.
+Students are encouraged to use the repository, report bugs, and suggest improvements whenever necessary. Nevertheless, the official development and organization of the repository remain under the supervision of the authors.
 
 Suggestions for improvement may be shared through issues or pull requests, which will be reviewed before any change is incorporated into the repository.
 
 ## General Recommendation
 
-Students are encouraged to keep this repository updated throughout the semester and use it as the main reference point for class notes, numerical examples, design criteria, and the progressive development of seismic-resistant design tools and concepts.
+Students are encouraged to keep this repository updated throughout the semester and use it as the main reference point for class notes, numerical examples, design criteria, and the progressive development of reinforced-concrete design tools and concepts.
