@@ -35,6 +35,10 @@ At its current stage, the repository includes:
 
 - `Markdowns/00_Introduction.ipynb` — theory: design philosophy, limit states, strength vs. capacity design, ACI 318-25 framework
 - `Markdowns/01_Loads.ipynb` — theory: gravity and lateral actions, load symbols, factored combinations, dead/live load takeoff
+- `Markdowns/02_Flexure_Behavior.ipynb` — theory: flexural equilibrium, strain compatibility, cracking, yielding, ductility, moment-curvature
+- `Markdowns/03_Flexural_Strength_Design.ipynb` — theory: equivalent Whitney block, strength reduction factor, reinforcement limits, flanged and general beam sections
+- `Markdowns/04_Slab_Behavior.ipynb` — theory: slab history and typology, one-way and two-way action, two-way (punching) shear, correlation with ACI CODE-318-25 Chapters 7 and 8
+- `Markdowns/ACI_318-25_Reading_Plan.ipynb` — a 15-week self-study reading plan through the ACI CODE-318-25 chapters and sections governing slabs, columns, and beam-column connections
 - `Examples/Basic_Coding.ipynb` — initial coding example for the course package
 - The reusable Python package and setup files for future computational implementations
 
@@ -44,6 +48,10 @@ At its current stage, the repository includes:
     │── Markdowns/
     │   ├── 00_Introduction.ipynb
     │   ├── 01_Loads.ipynb
+    │   ├── 02_Flexure_Behavior.ipynb
+    │   ├── 03_Flexural_Strength_Design.ipynb
+    │   ├── 04_Slab_Behavior.ipynb
+    │   ├── ACI_318-25_Reading_Plan.ipynb
     │   └── assets/
     │── Examples/
     │   └── Basic_Coding.ipynb
