@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1080" viewBox="0 0 1560 1080" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="1560" height="1080" fill="#ffffff"/>
+
+  <!-- ghost (adjacent-panel) hints: dimmed columns beyond the tributary boundary -->
+  <g opacity="0.4">
+    <rect x="195"  y="75"  width="30" height="30" fill="#64748b"/>
+    <rect x="795"  y="75"  width="30" height="30" fill="#64748b"/>
+    <rect x="1395" y="75"  width="30" height="30" fill="#64748b"/>
+    <rect x="195"  y="795" width="30" height="30" fill="#64748b"/>
+    <rect x="795"  y="795" width="30" height="30" fill="#64748b"/>
+    <rect x="1395" y="795" width="30" height="30" fill="#64748b"/>
+  </g>
+
+  <!-- column-strip bands (shaded design strip) -->
+  <rect x="60"   y="150" width="300" height="600" fill="#dbe3ec"/>
+  <rect x="660"  y="150" width="300" height="600" fill="#dbe3ec"/>
+  <rect x="1260" y="150" width="300" height="600" fill="#dbe3ec"/>
+
+  <!-- tributary-width boundary lines (panel centerlines above/below the row) -->
+  <line x1="120" y1="150" x2="1500" y2="150" stroke="#94a3b8" stroke-width="2" stroke-dasharray="14,6,3,6"/>
+  <line x1="120" y1="750" x2="1500" y2="750" stroke="#94a3b8" stroke-width="2" stroke-dasharray="14,6,3,6"/>
+
+  <!-- panel outline -->
+  <rect x="120" y="150" width="1380" height="600" fill="none" stroke="#1f2937" stroke-width="2"/>
+
+  <!-- beams: perpendicular (direction-2) beam bands at each column line -->
+  <rect x="196"  y="150" width="28" height="600" fill="#cbd5e1" stroke="#475569" stroke-width="2"/>
+  <rect x="796"  y="150" width="28" height="600" fill="#cbd5e1" stroke="#475569" stroke-width="2"/>
+  <rect x="1396" y="150" width="28" height="600" fill="#cbd5e1" stroke="#475569" stroke-width="2"/>
+
+  <!-- beam: direction-1 beam band along the row under analysis -->
+  <rect x="120" y="436" width="1380" height="28" fill="#cbd5e1" stroke="#475569" stroke-width="2"/>
+
+  <!-- column centerlines (thin reference dash-dot, on top of the beam bands) -->
+  <line x1="210"  y1="150" x2="210"  y2="750" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="14,6,3,6"/>
+  <line x1="810"  y1="150" x2="810"  y2="750" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="14,6,3,6"/>
+  <line x1="1410" y1="150" x2="1410" y2="750" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="14,6,3,6"/>
+
+  <!-- columns -->
+  <rect x="190"  y="430" width="40" height="40" fill="#334155" stroke="#0f172a" stroke-width="2"/>
+  <rect x="790"  y="430" width="40" height="40" fill="#334155" stroke="#0f172a" stroke-width="2"/>
+  <rect x="1390" y="430" width="40" height="40" fill="#334155" stroke="#0f172a" stroke-width="2"/>
+
+  <!-- l1 dimension line, first bay -->
+  <line x1="210" y1="35" x2="810" y2="35" stroke="#1f2937" stroke-width="1.5"/>
+  <line x1="210" y1="25" x2="210" y2="45" stroke="#1f2937" stroke-width="1.5"/>
+  <line x1="810" y1="25" x2="810" y2="45" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="510" y="22" font-size="30" text-anchor="middle" fill="#1f2937" font-style="italic">&#8467;&#8321;</text>
+
+  <!-- l1 dimension line, second bay -->
+  <line x1="810" y1="35" x2="1410" y2="35" stroke="#1f2937" stroke-width="1.5"/>
+  <line x1="1410" y1="25" x2="1410" y2="45" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="1110" y="22" font-size="30" text-anchor="middle" fill="#1f2937" font-style="italic">&#8467;&#8321;</text>
+
+  <!-- l2 dimension line (left side, vertical) -->
+  <line x1="60" y1="150" x2="60" y2="750" stroke="#1f2937" stroke-width="2"/>
+  <line x1="45" y1="150" x2="75" y2="150" stroke="#1f2937" stroke-width="2"/>
+  <line x1="45" y1="750" x2="75" y2="750" stroke="#1f2937" stroke-width="2"/>
+  <text x="15" y="450" font-size="30" text-anchor="middle" fill="#1f2937" font-style="italic" transform="rotate(-90 15 450)">&#8467;&#8322;</text>
+
+  <!-- column-strip half-width bracket, inside the panel, second column line -->
+  <line x1="660" y1="695" x2="810" y2="695" stroke="#1f2937" stroke-width="1.5"/>
+  <line x1="660" y1="685" x2="660" y2="705" stroke="#1f2937" stroke-width="1.5"/>
+  <line x1="810" y1="685" x2="810" y2="705" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="735" y="678" font-size="26" text-anchor="middle" fill="#1f2937">0.25&#8467;&#8321; or 0.25&#8467;&#8322;,</text>
+  <text x="735" y="730" font-size="26" text-anchor="middle" fill="#1f2937">whichever is smaller</text>
+
+  <!-- leader: column strip -->
+  <line x1="300" y1="230" x2="380" y2="205" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="386" y="210" font-size="30" fill="#1f2937">Column strip</text>
+
+  <!-- leader: middle strip -->
+  <line x1="540" y1="600" x2="540" y2="555" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="390" y="620" font-size="30" fill="#1f2937">Middle strip</text>
+
+  <!-- leader: column -->
+  <line x1="230" y1="450" x2="290" y2="490" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="296" y="510" font-size="28" fill="#1f2937">Column</text>
+
+  <!-- leader: beam (direction 1) -->
+  <line x1="1000" y1="450" x2="1060" y2="590" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="900" y="620" font-size="28" fill="#1f2937">Beam (direction 1)</text>
+
+  <!-- leader: beam (direction 2) -->
+  <line x1="810" y1="220" x2="900" y2="260" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="906" y="265" font-size="28" fill="#1f2937">Beam (direction 2)</text>
+
+  <!-- caption -->
+  <text x="780" y="1055" font-size="24" text-anchor="middle" fill="#475569" font-style="italic">Figure. Column strip and middle strip layout in plan, for the row of columns spanning in direction 1 (schematic, not an ACI figure).</text>
+</svg>
