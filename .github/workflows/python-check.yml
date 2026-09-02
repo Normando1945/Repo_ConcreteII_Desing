@@ -1,0 +1,47 @@
+name: Repository checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  static-checks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.10'
+
+      - name: Show Python version
+        run: python --version
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Compile Python sources
+        run: |
+          python -m compileall -q repo__CORE_concreteII_desing
+
+      - name: Install package in editable mode
+        run: |
+          pip install -e .
+
+      - name: Validate notebook JSON
+        run: |
+          python -c "
+          import json
+          from pathlib import Path
+
+          notebooks = sorted(Path('.').glob('**/*.ipynb'))
+          assert notebooks, 'No notebooks found'
+          for nb in notebooks:
+              json.load(open(nb, encoding='utf-8'))
+              print(f'OK: {nb}')
+          "
