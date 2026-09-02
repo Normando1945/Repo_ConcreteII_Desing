@@ -38,8 +38,11 @@ At its current stage, the repository includes:
 - `Markdowns/02_Flexure_Behavior.ipynb` — theory: flexural equilibrium, strain compatibility, cracking, yielding, ductility, moment-curvature
 - `Markdowns/03_Flexural_Strength_Design.ipynb` — theory: equivalent Whitney block, strength reduction factor, reinforcement limits, flanged and general beam sections
 - `Markdowns/04_Slab_Behavior.ipynb` — theory: slab history and typology, one-way and two-way action, two-way (punching) shear, correlation with ACI CODE-318-25 Chapters 7 and 8
+- `Markdowns/05_Slab_Design.ipynb` — theory: Direct Design Method scope and limitations, total factored static moment, longitudinal distribution, column and middle strips, minimum reinforcement
+- `Markdowns/06_Two_Way_Shear_Design.ipynb` — theory: punching shear mechanism, critical section, two-way shear strength provided by concrete, size effect factor, eccentric shear transfer
 - `Markdowns/ACI_318-25_Reading_Plan.ipynb` — a 15-week self-study reading plan through the ACI CODE-318-25 chapters and sections governing slabs, columns, and beam-column connections
 - `Examples/Basic_Coding.ipynb` — initial coding example for the course package
+- `Examples/Slab.ipynb` — applied example: one-way and two-way action classification from slab and panel data
 - The reusable Python package and setup files for future computational implementations
 
 ## Repository Structure
@@ -51,10 +54,13 @@ At its current stage, the repository includes:
     │   ├── 02_Flexure_Behavior.ipynb
     │   ├── 03_Flexural_Strength_Design.ipynb
     │   ├── 04_Slab_Behavior.ipynb
+    │   ├── 05_Slab_Design.ipynb
+    │   ├── 06_Two_Way_Shear_Design.ipynb
     │   ├── ACI_318-25_Reading_Plan.ipynb
     │   └── assets/
     │── Examples/
-    │   └── Basic_Coding.ipynb
+    │   ├── Basic_Coding.ipynb
+    │   └── Slab.ipynb
     │── repo__CORE_concreteII_desing/
     │   ├── __init__.py
     │   └── core.py
