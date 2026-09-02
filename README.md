@@ -338,6 +338,16 @@ If you use this repository in academic work, class projects, reports, or educati
 
 Celi Sánchez, C. A., Mora Bowen, N., & Baquero, J. S. (2026). *Reinforced Concrete Design II: Educational Repository for Concrete Design and Structural Engineering* [Structural Engineering]. GitHub. https://github.com/Normando1945/Repo_ConcreteII_Desing
 
+## Authors
+
+<p align="center">
+  <img src="Markdowns/assets/authors.png" alt="Course authors, from left to right: Nicolás Mora Bowen, Carlos Andrés Celi Sánchez, and Juan Sebastián Baquero" width="100%" />
+</p>
+
+- **Carlos Andrés Celi Sánchez** — Lead author. Pontificia Universidad Católica del Ecuador, Faculty of Habitat, Infrastructure and Creativity, Quito, Ecuador.
+- **Nicolás Mora Bowen** — Universidad de los Andes, Faculty of Engineering and Applied Sciences, Santiago, Chile.
+- **Juan Sebastián Baquero** — Pontificia Universidad Católica del Ecuador, Faculty of Habitat, Infrastructure and Creativity, Quito, Ecuador.
+
 ## License
 <p align="center">
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License">
