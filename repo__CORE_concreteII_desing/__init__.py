@@ -1,5 +1,6 @@
-from .core import (SimpleMatrixStack)
+from .core import (SimpleMatrixStack, SimpleClass)
 
 __all__ = [
     "SimpleMatrixStack",
+    "SimpleClass",
 ]
