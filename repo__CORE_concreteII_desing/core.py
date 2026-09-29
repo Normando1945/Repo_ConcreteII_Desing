@@ -32,13 +32,14 @@ class SimpleMatrixStack:
 #########################################################################################################################################
 #########################################################################################################################################
 class SimpleClass():
-    def __init__(self, x = any,y = any, title = 'test', xlabel = 'x', ylabel = 'y', color = (0,0,0)):
+    def __init__(self, x = any,y = any, title = 'test', xlabel = 'x', ylabel = 'y', color = (0,0,0), grid_direction = 'x'):
         self.x = x                                                      # Store x in the instance
         self.y = y                                                      # Store y in the instance
         self.title = title                                              # Store the title
         self.xlabel = xlabel                                            # Store the x label
         self.ylabel = ylabel                                            # Store the y label
         self.color = color
+        self.grid_direction = grid_direction
 
     def SimplePlot(self):
         x = self.x                                                      # Read x from the instance
@@ -47,6 +48,7 @@ class SimpleClass():
         xlabel = self.xlabel                                            # Read the x label
         ylabel = self.ylabel                                            # Read the y label
         color = self.color
+        grid_direction = self.grid_direction
 
 
         fig, ax = plt.subplots(1,1, figsize = (15,6))                   # Create a figure with one subplot
@@ -55,4 +57,5 @@ class SimpleClass():
         ax.set_xlabel(xlabel)                                           # Label the x axis
         ax.set_ylabel(ylabel)                                           # Label the y axis
         ax.set_xlim(np.min(x),np.max(x))                                # Axis limits computed from the data
+        ax.grid(which='both', axis=grid_direction, alpha=0.5)
         plt.show()                                                      # Render the figure
