@@ -89,5 +89,55 @@ class SimpleFlexuralCapacity():
         d = H-rec-diF/2
         As = 1/ fi* (0.85*fc*bw/fy * (d - np.sqrt(d**(2) - 2*Mu/(0.85*fc*bw))))
         Asmin = 0.0018*bw*H
+
+        if As > Asmin:
+            Asexc = As - Asmin
+            numvar_exc = np.ceil(Asexc / (np.pi * diF**(2) / 4))
+            Asexc = numvar_exc * (np.pi * diF**(2) / 4)
+            S_exc = bw / numvar_exc
+            fiMnexc = fi*(Asexc*fy*(d - Asexc*fy/(1.70*fc*bw)))
+
+            numvar_min = np.ceil(Asmin / (np.pi * diF**(2) / 4))
+            Asmin = numvar_min * (np.pi * diF**(2) / 4)
+            S_min = bw / numvar_min
+            fiMnmin = fi*(Asmin*fy*(d - Asmin*fy/(1.70*fc*bw)))
+
+            fiMn = fiMnexc + fiMnmin
+
+            if fiMn >= Mu:
+                mensaje = 'ok'
+            else:
+                mensaje = 'mal'
+
+            print('='*120)
+            print('Requeried extra Reinforcement')
+            print(f'Asexc = {Asexc:.3f} cm2')
+            print(f'1 Φ {diF*10:.0f} @ {S_exc:.0f} / cant = {numvar_exc:.0f} --> bw = {bw:.0f} cm')
+            print(f'Asmin = {Asmin:.3f} cm2')
+            print(f'1 Φ {diF*10:.0f} @ {S_min:.0f} / cant = {numvar_min:.0f} --> bw = {bw:.0f} cm')
+            print(f'ΦMn = {fiMn/1e5:.2f} T-m , Mu = {Mu/1e5:.2f} T-m, check = {mensaje}')
+            print('='*120)
+        else:
+            numvar_min = np.ceil(Asmin / (np.pi * diF**(2) / 4))
+            Asmin = numvar_min * (np.pi * diF**(2) / 4)
+            S_min = bw / numvar_min
+            fiMnmin = fi*(Asmin*fy*(d - Asmin*fy/(1.70*fc*bw)))
+
+            fiMn = fiMnmin
+            
+            if fiMn >= Mu:
+                mensaje = 'ok'
+            else:
+                mensaje = 'mal'
+
+            print('='*120)
+            print('Does not requeried extra Reinforcement')
+            print(f'Asmin = {Asmin:.3f} cm2')
+            print(f'1 Φ {diF*10:.0f} @ {S_min:.0f} / cant = {numvar_min:.0f} --> bw = {bw:.0f} cm')
+            print(f'ΦMn = {fiMn/1e5:.2f} T-m , Mu = {Mu/1e5:.2f} T-m, check = {mensaje}')
+            print('='*120)
+            
+
         
+
         return As, Asmin
