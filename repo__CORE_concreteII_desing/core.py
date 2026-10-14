@@ -115,7 +115,7 @@ class SimpleFlexuralCapacity():
             print(f'1 Φ {diF*10:.0f} @ {S_exc:.0f} / cant = {numvar_exc:.0f} --> bw = {bw:.0f} cm')
             print(f'Asmin = {Asmin:.3f} cm2')
             print(f'1 Φ {diF*10:.0f} @ {S_min:.0f} / cant = {numvar_min:.0f} --> bw = {bw:.0f} cm')
-            print(f'ΦMn = {fiMn/1e5:.2f} T-m , Mu = {Mu/1e5:.2f} T-m, check = {mensaje}')
+            print(f'ΦMn = {fiMn/1e5:.2f} T-m , Mu = {Mu/1e5:.2f} T-m, check = {mensaje}, DCR = {Mu/fiMn * 100:.0f} %')
             print('='*120)
         else:
             numvar_min = np.ceil(Asmin / (np.pi * diF**(2) / 4))
@@ -134,7 +134,7 @@ class SimpleFlexuralCapacity():
             print('Does not requeried extra Reinforcement')
             print(f'Asmin = {Asmin:.3f} cm2')
             print(f'1 Φ {diF*10:.0f} @ {S_min:.0f} / cant = {numvar_min:.0f} --> bw = {bw:.0f} cm')
-            print(f'ΦMn = {fiMn/1e5:.2f} T-m , Mu = {Mu/1e5:.2f} T-m, check = {mensaje}')
+            print(f'ΦMn = {fiMn/1e5:.2f} T-m , Mu = {Mu/1e5:.2f} T-m, check = {mensaje}, DCR = {Mu/fiMn * 100:.0f} %')
             print('='*120)
             
 
