@@ -59,3 +59,35 @@ class SimpleClass():
         ax.set_xlim(np.min(x),np.max(x))                                # Axis limits computed from the data
         ax.grid(which='both', axis=grid_direction, alpha=0.5)
         plt.show()                                                      # Render the figure
+
+#########################################################################################################################################
+#########################################################################################################################################
+########################################################### As, Asmin, fiMn #############################################################
+#########################################################################################################################################
+#########################################################################################################################################
+class SimpleFlexuralCapacity():
+    def __init__(self, fc = 280, fy = 4200, bw = 100, H = 30, rec = 2.5,fi = 0.9, diF = 1.2, Mu = 2.3*1e5):
+        self.fc = fc
+        self.fy = fy
+        self.bw = bw
+        self.H = H
+        self.rec = rec
+        self.fi = fi
+        self.diF = diF
+        self.Mu = Mu
+
+    def as_asmin(self):
+        fc = self.fc
+        fy = self.fy
+        bw = self.bw
+        H = self.H
+        rec = self.rec
+        fi = self.fi
+        diF = self.diF
+        Mu = self.Mu
+
+        d = H-rec-diF/2
+        As = 1/ fi* (0.85*fc*bw/fy * (d - np.sqrt(d**(2) - 2*Mu/(0.85*fc*bw))))
+        Asmin = 0.0018*bw*H
+        
+        return As, Asmin
