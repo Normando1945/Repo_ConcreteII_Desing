@@ -211,3 +211,15 @@ class SimpleShearSlab():
         FiVc_b = fi*(0.53*(1 + 2/beta)*lamdas*lamda*np.sqrt(fc)*bw*d)
         #-------ΦVc (c)[ACI 22.6.5.2]-------# 
         FiVc_c = fi*(0.27*(2 + alfas * d/bo)*lamdas*lamda*np.sqrt(fc)*bw*d)
+
+        print('='*120)
+        print('.'*90)
+        print(f'Vu = {Vu/1000:.2f} T')
+        print(f'H = {H:.2f} cm')
+        print(f'd = {d:.2f} cm')
+        print('.'*90)
+        print('ACI 22.6.5.2')
+        print(f'ΦVc (a) = {FiVc_a/1000:.2f} T')
+        print(f'ΦVc (b) = {FiVc_b/1000:.2f} T')
+        print(f'ΦVc (c) = {FiVc_c/1000:.2f} T')
+        print('='*120)
