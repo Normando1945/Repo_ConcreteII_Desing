@@ -211,15 +211,31 @@ class SimpleShearSlab():
         FiVc_b = fi*(0.53*(1 + 2/beta)*lamdas*lamda*np.sqrt(fc)*bw*d)
         #-------ΦVc (c)[ACI 22.6.5.2]-------# 
         FiVc_c = fi*(0.27*(2 + alfas * d/bo)*lamdas*lamda*np.sqrt(fc)*bw*d)
+        #-------ΦVc (c)[ACI ]-------# 
+        FiVc_max = fi*(1.33*lamda*np.sqrt(fc)*bw*d)
+
+        #-------ΦVn-------#
+        Fi_Vc = np.min([FiVc_a,FiVc_b,FiVc_c])
+        Fi_Vn = np.min([Fi_Vc, FiVc_max])
 
         print('='*120)
         print('.'*90)
         print(f'Vu = {Vu/1000:.2f} T')
         print(f'H = {H:.2f} cm')
         print(f'd = {d:.2f} cm')
+        print(f'bw = {bw:.2f} cm')
+        print(f'bo = {bo:.2f} cm')
+        print(f' λ = {lamda:.0f}')
+        print(f' λs = {lamdas:.3f}')
         print('.'*90)
         print('ACI 22.6.5.2')
         print(f'ΦVc (a) = {FiVc_a/1000:.2f} T')
         print(f'ΦVc (b) = {FiVc_b/1000:.2f} T')
         print(f'ΦVc (c) = {FiVc_c/1000:.2f} T')
+        print(f'ΦVc (max) = {FiVc_max/1000:.2f} T')
+        print('.'*90)
+        if Fi_Vn >= Vu:
+            print(f'ΦVn = {Fi_Vn/1000:.2f} T > Vu = {Vu/1000:.2f} T -------> ok')
+        else:
+            print(f'Increse H')
         print('='*120)
