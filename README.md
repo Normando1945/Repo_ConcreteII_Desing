@@ -44,7 +44,40 @@ At its current stage, the repository includes:
 - `Markdowns/ACI_318-25_Reading_Plan.ipynb` — a 15-week self-study reading plan through the ACI CODE-318-25 chapters and sections governing slabs, columns, and beam-column connections
 - `Examples/Basic_Coding.ipynb` — initial coding example for the course package
 - `Examples/Slab.ipynb` — applied example: one-way and two-way action classification from slab and panel data
+- `Examples/rapid_code.ipynb` — quick Python primer for the course: NumPy, pandas, and Matplotlib basics, arrays and loops, the free response of an undamped single-degree-of-freedom oscillator, and the step from script to function to class using the course package
 - The reusable Python package and setup files for future computational implementations
+
+## A Look Inside: Columns in Motion
+
+The column notebook (`07_Column_Design.ipynb`) builds the uniaxial interaction diagram of a 30 x 50 cm tied column entirely by hand, under ACI CODE-318-25. These animations are part of that notebook: every number on screen comes from the same worked example the students solve on paper.
+
+<p align="center">
+  <img src="Markdowns/assets/07_column_design/gif-01_interaction_sweep.gif" width="100%" alt="The neutral axis sweeps the example column section while the nominal and design interaction diagrams are traced point by point">
+  <br>
+  <sub><b>One neutral-axis depth, one point of the diagram.</b> The neutral axis sweeps the section from pure compression to pure tension, and the nominal and design curves are traced as it moves, pausing at the six hand-computed points.</sub>
+</p>
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img src="Markdowns/assets/07_column_design/gif-02_point5_steps.gif" width="100%" alt="Step-by-step calculation of the tension-controlled limit point">
+      <br>
+      <sub><b>Never skip the yield check.</b> At the tension-controlled limit, the compression steel does not yield; assuming it does overstates its force by 13%.</sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="Markdowns/assets/07_column_design/gif-03_phi_2019_vs_2025.gif" width="100%" alt="Design interaction diagram under ACI 318-19 versus ACI CODE-318-25">
+      <br>
+      <sub><b>ACI 318-19 vs. ACI CODE-318-25.</b> The new provision 21.2.2.3 lowers &phi; between 0.1f'<sub>c</sub>A<sub>g</sub> and P<sub>n,bal</sub>; at the tension-controlled limit the design moment drops by 12%.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="Markdowns/assets/07_column_design/gif-04_confinement.gif" width="70%" alt="Schematic comparison of a tied and a spiral column under increasing axial load">
+      <br>
+      <sub><b>Why spirals earn a higher &phi;</b> (schematic). Both columns lose their cover, but only the confined core of the spiral column keeps carrying load.</sub>
+    </td>
+  </tr>
+</table>
 
 ## Repository Structure
 
@@ -62,7 +95,8 @@ At its current stage, the repository includes:
     │   └── assets/
     │── Examples/
     │   ├── Basic_Coding.ipynb
-    │   └── Slab.ipynb
+    │   ├── Slab.ipynb
+    │   └── rapid_code.ipynb
     │── repo__CORE_concreteII_desing/
     │   ├── __init__.py
     │   └── core.py
